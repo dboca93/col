@@ -27,13 +27,11 @@ header {
 .nav__links a {
     color: red;
     margin-right: auto;
-    
 }
-@media only screen and (max-width:900px){
+@media only screen and (max-width:1000px){
     .corner-one {
         display: none;
     }
-    
     .nav__links a {
         display: none;
     }
@@ -43,22 +41,64 @@ header {
         align-items: center;
         justify-content: space-evenly;
         flex-direction: row;
-
-        margin: auto;
     }
     .link-c, .link-b, .link-a, .corner-two {
         margin: 0 auto;
     }
-
 }
 
-@media only screen and (min-width:900px){
- 
+@media only screen and (min-width:1000px){
     .nav__icons {
         display: none;
         justify-content: space-evenly;
     }
-    header {
+}
+/*This is the main banner section, we intend to have both the 
+desktop and mobile versions here, and we intend to try 
+flexbox, and then position, if flexbox is not working.*/
+.banner-container {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 32px 0px;
+    
+    background-color: lightgray;
+    
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+   
+    
+}
+.img-text {
+    
+        outline: 1px solid black;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 240px;
+      
+    
+    
+
+}
+
+@media only screen and (min-width:1000px) {
+    .banner-container {
+        padding-left: 
+    }
+    .banner-img {
+        width: 60%;
         
+    }
+    .img-text {
+        width: 40%;
+    }
+}
+@media only screen and (max-width:1000px) {
+    .banner-container {
+        padding: 0px 0px;
+    }
+    .banner-img {
+        width: 100%;
     }
 }

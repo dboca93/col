@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 * {
     background-color: whitesmoke;
     margin: 0;
@@ -57,30 +57,45 @@ header {
 desktop and mobile versions here, and we intend to try 
 flexbox, and then position, if flexbox is not working.*/
 .banner-container {
+    
     border-top: 5px solid black;
     border-bottom: 5px solid black;
-    padding: 32px 0px;
     
-    background-color: lightgray;
+    
+    background-color: hsl(0, 0%, 90%);
     
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-   
-    
 }
 .img-text {
-    
-        outline: 1px solid black;
-        text-align: center;
         margin: 0 auto;
-        padding-top: 240px;
-      
-    
-    
-
+        outline: 1px solid black;
+        background-color: hsl(0, 0%, 90%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 }
+.img-text h1 {
+    outline: 1px solid black;
+    width: 80%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    flex-wrap: nowrap;
+}
+.img-text button {
+    padding: 8px 0px;
+    width: 80%;
+    margin: top;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+}
+
+
+
+
 
 @media only screen and (min-width:1000px) {
     .banner-container {
@@ -88,7 +103,6 @@ flexbox, and then position, if flexbox is not working.*/
     }
     .banner-img {
         width: 60%;
-        
     }
     .img-text {
         width: 40%;

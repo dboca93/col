@@ -4,7 +4,9 @@
     background-color: whitesmoke;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+/* Header & Top-Navigation Area*/
 header {
     height: 64px;
     border-bottom: 1px solid black;
@@ -53,14 +55,12 @@ header {
         justify-content: space-evenly;
     }
 }
-/*This is the main banner section, we intend to have both the 
-desktop and mobile versions here, and we intend to try 
-flexbox, and then position, if flexbox is not working.*/
+/*Main-Banner-Page-One*/
 .banner-container {
     
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
-    
+    /*border-top: 5px solid black;
+    border-bottom: 5px solid black;*/
+    padding: 32px 0px 32px 24px;
     
     background-color: hsl(0, 0%, 90%);
     
@@ -77,20 +77,50 @@ flexbox, and then position, if flexbox is not working.*/
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-left: 24px;
 }
+@media only screen and (max-width:1000px) {
+    .img-text {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+    }
+    .img-text h3 {
+        width: 80%;
+        font-size: 24px;
+        outline: 1px solid black;
+        font-style: italic;
+        text-align: center;
+        font-size: 24px;
+    }
+    .img-text button {
+        width: 25%;
+        font-size: 14px;
+
+    }
+
+
+
+}
+
+
 .img-text h1 {
     outline: 1px solid black;
     width: 80%;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    flex-wrap: nowrap;
+    
 }
 .img-text button {
     padding: 8px 0px;
     width: 80%;
-    margin: top;
+   
     font-family: 'Open Sans', sans-serif;
     font-size: 26px;
+}
+.img-text h3 {
+    margin: 32px 0px;
 }
 
 
@@ -98,15 +128,24 @@ flexbox, and then position, if flexbox is not working.*/
 
 
 @media only screen and (min-width:1000px) {
-    .banner-container {
-        padding-left: 
-    }
+ 
     .banner-img {
-        width: 60%;
+        width: 55%;/*This next line is a test*/
+       /* height: 575px; */
+       
     }
     .img-text {
         width: 40%;
+        margin-left: 24px;
     }
+    .img-text h3 {
+        display: none;
+    }
+    .img-text button {
+        margin-top: 32px;
+    }
+ 
+
 }
 @media only screen and (max-width:1000px) {
     .banner-container {
@@ -116,3 +155,29 @@ flexbox, and then position, if flexbox is not working.*/
         width: 100%;
     }
 }
+
+/*Second Page-Scrolling Down*/
+.second-banner-container {
+    background-color: hsl(0, 0%, 90%);
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 32px 0px;
+}
+
+.second-img-container{
+    outline: 1px solid black;
+    padding: 0px 24px;
+    width: 60%;
+    background-color: hsl(0, 0%, 90%);
+}
+.second-img-container img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+

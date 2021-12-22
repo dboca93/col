@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 * {
     background-color: whitesmoke;
     margin: 0;
@@ -17,23 +18,44 @@ header {
     justify-content: flex-end;
 }
 .top-header a {
-    font-family: "Playfair", sans-serif;
+    font-family: 'Merriweather', serif;
     text-decoration: none;
     color: black;
 
     font-weight: 400;
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     margin-right: auto;
+    /*Re-committed*/
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-.nav__links a {
-    color: red;
-    margin-right: auto;
+.nav__links a:hover{
+    text-decoration: underline;
+
 }
+.corner-one img {
+    padding-top: 2px;
+    padding-right: 6px;
+}
+.link-b {
+    margin-left: 35px;
+}
+.link-c {
+    margin-left: 35px;
+  }
 @media only screen and (max-width:1000px){
     .corner-one {
         display: none;
     }
+    /*Notice here with the "a.corner-one"
+    A good chance to investigate...*/
+    a.corner-one {
+        display: none;
+    }
+ 
     .nav__links a {
         display: none;
     }
@@ -43,6 +65,7 @@ header {
         align-items: center;
         justify-content: space-evenly;
         flex-direction: row;
+        margin-top: 7.5px;
     }
     .link-c, .link-b, .link-a, .corner-two {
         margin: 0 auto;
@@ -71,8 +94,7 @@ header {
 }
 .img-text {
         margin: 0 auto;
-        outline: 1px solid black;
-        background-color: hsl(0, 0%, 90%);
+        background-color: whitesmoke;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -82,8 +104,7 @@ header {
 @media only screen and (max-width:1000px) {
     .img-text {
         width: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 72.5px 24px;
         
     }
     .img-text h3 {
@@ -106,17 +127,24 @@ header {
 
 
 .img-text h1 {
-    outline: 1px solid black;
+    
     width: 80%;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 1.4;
+    background-color: #24252A;
+    color: #ddc09b;
+    border-radius: 15px;
     
 }
 .img-text button {
     padding: 8px 0px;
     width: 80%;
    
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', serif;
     font-size: 26px;
 }
 .img-text h3 {
@@ -167,17 +195,132 @@ header {
     width: 100%;
     padding: 32px 0px;
 }
-
+.second-image-para-container {
+    width: 60%;
+    
+}
 .second-img-container{
     outline: 1px solid black;
     padding: 0px 24px;
-    width: 60%;
+    width: 100%;
     background-color: hsl(0, 0%, 90%);
 }
 .second-img-container img {
     width: 100%;
     height: 100%;
+}
+.para-container {
+    padding: 32px 24px;
+}
+.second-right-list {
+    outline: 1px solid black;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 40%;
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    flex-direction: column;
     
 }
+.orientation {
+    border-bottom: 0.5px solid black;
+    width: 100%;
+    padding: 16px 0px 14px 16px;
+    display: inline-flex;    
+}
+.orientation-image-container {
+    width: 35%;
+    height: auto;
+}
+.orientation-image-container img {
+    width: 100%;
+    height: auto;
+}
+.orientation-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 24px;
+    
+    width: 65%;
+    height: auto;
+}
+.campus, .campus-text-container, 
+.campus-image-container {
+    background-color: whitesmoke;
+}
+.campus-text-container h1 p a {
+    background-color: whitesmoke;
+}
+.campus {
+    border-bottom: 1px solid black;
+}
+
+.campus, .guest-lecture {
+    
+    width: 100%;
+    padding: 16px 0px 14px 16px;
+    display: inline-flex; 
+    align-items: center;
+}
+.campus-image-container, .guest-image-container {
+    width: 35%;
+    height: auto;
+}
+.campus-image-container img, 
+.guest-image-container img {
+    width: 100%;
+    height: auto;
+}
+.campus-text-container, .guest-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 24px;
+    
+    width: 65%;
+    height: auto;
+}
+/* In the following area we intend to use
+display: initial, and display: none;*/
 
 
+
+
+@media only screen and (max-width: 1000px) {
+    .second-image-para-container {
+        display: none;
+    }
+    .second-right-list {
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .image-c, .image-ga, .orien-a {
+        display: none;
+    }
+  
+}
+@media only screen and (min-width: 1000px) {
+    .alternative-image-c, .image-gb, 
+    .orien-b {
+        display: none;
+    }
+}
+/*Mobile Phone - Size Adjustments*/
+@media only screen and (max-width: 420px) {
+    .campus-text-container p, .guest-text-container p,
+     .orientation-text-container p {
+       display: none;
+   }
+   .second-banner-container {
+       padding: 12px 0px;
+   }
+   .second-right-list {
+       padding: 0px 0px;
+   }
+   .campus-text-container, .orientation-text-container,
+   .guest-text-container {
+    margin-bottom: 3.5px;
+   }
+   
+}

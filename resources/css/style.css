@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 * {
     background-color: whitesmoke;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 /* Header & Top-Navigation Area*/
 header {
     height: 64px;
     border-bottom: 1px solid black;
-    padding: 0 24px;
+    padding: 0 24px 0px 24px;
 
     display: flex;
     align-items: center;
@@ -83,7 +85,7 @@ header {
     
     /*border-top: 5px solid black;
     border-bottom: 5px solid black;*/
-    padding: 32px 0px 32px 24px;
+    padding: 22px 0px 32px 24px;
     
     background-color: hsl(0, 0%, 90%);
     
@@ -93,7 +95,7 @@ header {
     width: 100%;
 }
 .img-text {
-        margin: 0 auto;
+        margin: 0px 0px 0px 44px;
         background-color: whitesmoke;
         display: flex;
         flex-direction: column;
@@ -105,6 +107,7 @@ header {
     .img-text {
         width: 100%;
         padding: 72.5px 24px;
+        margin: 0 auto;
         
     }
     .img-text h3 {
@@ -283,10 +286,6 @@ header {
 }
 /* In the following area we intend to use
 display: initial, and display: none;*/
-
-
-
-
 @media only screen and (max-width: 1000px) {
     .second-image-para-container {
         display: none;
@@ -321,6 +320,68 @@ display: initial, and display: none;*/
    .campus-text-container, .orientation-text-container,
    .guest-text-container {
     margin-bottom: 3.5px;
-   }
+   }  
+}
+/* Third-Banner Section
+Wall-to-Wall Div, then Div-of-6: the
+Subject Menu, then 6-divs: each
+with a text-based section and a image section.*/
+.third-banner {
+    width: 100%;
+    border-top: 5px solid black;
+    border-bottom: 5px solif black;
+    background: lightgray;
+    padding: 32px 72px;
+}
+.third-banner-heading {
+    text-align: center;
+    font-size: 32px;
+}
+
+.subject-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.software-engineering, .computer-art,
+.design, .data, .business, .marketing {
+    width: 30%;
+    min-width: 300px;
+    outline: 1px solid black;
+    margin: 10px 10px;
+}
+.subject-menu img {
+    height: auto;
+    width: 100%;
+}
+/*Mobile Representation of Third-Banner Section*/
+
+.third-banner-mobile {
+   display: flex;
+   width: 100%;
+    outline: 5px solid black;
+
+    justify-content: center;
    
+}
+
+.mobile-button-container {
+    display: flex;
+    flex-direction: column;
+    outline: 3px solid black;
+    width: 80%;
+}
+.mobile-button-container h3 {
+    text-align: center;
+    padding: 16px 16px 16px 16px;
+}
+
+.mobile-button-container button {
+    padding: 16px 16px 16px 16px;
+    margin-top: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #edf0f1;
+    background-color: #24252A;
 }

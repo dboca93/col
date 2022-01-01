@@ -336,6 +336,8 @@ with a text-based section and a image section.*/
 .third-banner-heading {
     text-align: center;
     font-size: 32px;
+    padding: 15px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .subject-menu {
@@ -343,19 +345,21 @@ with a text-based section and a image section.*/
     flex-flow: row wrap;
     justify-content: space-evenly;
     width: 100%;
+    border-radius: 0px 0px 10px 10px;
 }
 .software-engineering, .computer-art,
 .design, .data, .business, .marketing {
     width: 30%;
     min-width: 300px;
-    outline: 1px solid black;
     margin: 10px 10px;
 }
 .subject-menu img {
     height: auto;
     width: 100%;
+    border-radius: 10px;
 }
-/*Mobile Representation of Third-Banner Section*/
+/*Mobile Representation of Third-Banner Section
+Build */
 
 .third-banner-mobile {
    display: flex;
@@ -363,25 +367,138 @@ with a text-based section and a image section.*/
     outline: 5px solid black;
 
     justify-content: center;
-   
+    background-color: #edf0f1;
 }
 
 .mobile-button-container {
     display: flex;
     flex-direction: column;
-    outline: 3px solid black;
     width: 80%;
+    padding: 0 0 20px 0;
 }
 .mobile-button-container h3 {
     text-align: center;
     padding: 16px 16px 16px 16px;
+    font-size: 26px;
+    color: #24252A;
+    margin-bottom: -8px;
 }
 
 .mobile-button-container button {
     padding: 16px 16px 16px 16px;
-    margin-top: 8px;
+    margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #edf0f1;
     background-color: #24252A;
+    border-radius: 10px;
+    transition-property: color;
+    cursor: pointer;
+
+    
+}
+button:hover {
+    color: #ddc09b;
+}
+
+@media only screen and (max-width: 900px) {
+    .third-banner {
+        display: none;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .third-banner-mobile {
+        display: none;
+    }
+}
+
+/*Fourth-Banner Container Notes; Experiment
+with Flex vs Inline-Flex*/
+.fourth-banner-container {
+    background-color: whitesmoke;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 5px 12px 20px;
+}
+.fourth-header-div {
+        text-align: center;
+        outline: 1px solid black;
+        font-size: 32px;
+        display: block;
+        margin: 1px auto;
+        background-color: whitesmoke;
+        width: 100%;
+}
+.fourth-header-div h3 {
+    font-size: 32px;
+}
+.fourth-banner-video-para-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.fourth-video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.fourth-para-container h5 {
+    font-size: 24px
+}
+.fourth-para-container p {
+    font-size: 18px
+}
+.fourth-side-container {
+    
+    height: auto;
+    margin-left: 14px;
+    width: 37.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.fisma-div, .new-york-div {
+  display: flex;
+  flex-direction: row;
+  padding: 18px 0px 18px 18px;
+}
+.fisma-div, .fisma-img, .fisma-text,
+.fisma-text h3, .fisma-text p {
+    background-color: #C0C0C0;
+}
+.fisma-img, .new-york-img {
+    width: 35%;
+}
+.fisma-img img, .new-york-img img {
+    width: 100%;
+    height: auto;
+}
+.fisma-text p, .new-york-text p {
+    margin-top: 6px;
+}
+.fisma-text, .new-york-text {
+    padding: 0px 0px 0px 18px;
+    width: 65%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.new-york-div {
+    border-bottom: 0.25px solid black;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .fourth-side-container  {
+        display: none;
+    }
+    .fourth-banner-video-para-container {
+        width: 100%;
+    }
 }

@@ -11,7 +11,7 @@
 }
 /* Header & Top-Navigation Area*/
 header {
-    height: 64px;
+    height: 34px;
     border-bottom: 1px solid black;
     padding: 0 24px 0px 24px;
 
@@ -85,125 +85,158 @@ header {
     
     /*border-top: 5px solid black;
     border-bottom: 5px solid black;*/
-    padding: 22px 0px 32px 24px;
+    padding: 0px 0px 20px 20px;
     
     background-color: hsl(0, 0%, 90%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
 }
-.img-text {
-        margin: 0px 0px 0px 44px;
-        background-color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-left: 24px;
+.main-image-div {
+    width: 60%;
+    background-color: hsl(0, 0%, 90%);
+    
 }
-@media only screen and (max-width:1000px) {
-    .img-text {
+.main-image-div img {
+    width: 100%;
+    display: inline-flex;
+flex-flow: row wrap;
+}
+/*make it 100% of the screen size when its 
+less than 1000px*/
+/*
+@media only screen and (max-width:1200px) {
+    .banner-container img {
         width: 100%;
-        padding: 72.5px 24px;
-        margin: 0 auto;
+    }
+}
+*/
+
+.banner-container-text {
+   outline: 1px solid black;
+   display: inline-flex;
+  
+    flex-flow: column wrap;
+width: 37.5%;
+justify-content: center;
+margin: 30px auto;
+text-align: center;
+border-radius: 15px;
+}
+.banner-container-text img {
+    width: 50px;
+height: auto;
+margin: 0 auto;
+padding-top: 10px;
+}
+
+.banner-container-text h3 {
+    font-size: 24px;
+    width: 75%;
+    margin: 25px auto;
+    
+}
+.banner-container-text h2 {
+    font-size: 20px;
+    width: 75%;
+    margin: 25px auto;
+    
+}
+.banner-container-text button {
+    width: 50%;
+    margin: 20px auto;
+    padding: 5px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(0, 136, 169, 1);
+    color: whitesmoke;
+}
+/*In the following Media Queries, reduce
+the font-size / margins in banner-container
+-text at less than 1160. Also, make the
+img-width 100% at less than 1000px, also
+give it a display: block.*/
+
+
+
+
+
+
+@media only screen and (max-width:1160px) {
+    .banner-container-text h3 {
+        font-size: 22px;
+        width: 65%;
+        margin: 5px auto;
         
     }
-    .img-text h3 {
-        width: 80%;
-        font-size: 24px;
-        outline: 1px solid black;
-        font-style: italic;
-        text-align: center;
-        font-size: 24px;
-    }
-    .img-text button {
-        width: 25%;
-        font-size: 14px;
-
-    }
-
-
-
-}
-
-
-.img-text h1 {
-    
-    width: 80%;
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 38px;
-    line-height: 1.4;
-    background-color: #24252A;
-    color: #ddc09b;
-    border-radius: 15px;
-    
-}
-.img-text button {
-    padding: 8px 0px;
-    width: 80%;
    
-    font-family: 'Merriweather', serif;
-    font-size: 26px;
+    .banner-container-text h2 {
+        font-size: 18px;
+        width: 65%;
+        margin: 5px auto;
+        
+    }
+    .banner-container-text {
+        margin: 15px auto;
+    }
 }
-.img-text h3 {
-    margin: 32px 0px;
-}
 
 
-
-
-
-@media only screen and (min-width:1000px) {
- 
-    .banner-img {
-        width: 55%;/*This next line is a test*/
-       /* height: 575px; */
-       
-    }
-    .img-text {
-        width: 40%;
-        margin-left: 24px;
-    }
-    .img-text h3 {
-        display: none;
-    }
-    .img-text button {
-        margin-top: 32px;
-    }
- 
-
-}
 @media only screen and (max-width:1000px) {
-    .banner-container {
-        padding: 0px 0px;
+    .main-image-div {
+    display: block;
+    width: 100%;
+    
     }
-    .banner-img {
-        width: 100%;
+    .banner-container {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .banner-container-text {
+        width: 87.5%;
+        display: block;
+    }
+    .top-header {
+        border-bottom: 0px;
     }
 }
-
+@media only screen and (max-width: 480px)
+{
+    .banner-container-text h3 {
+        font-size: 18px;
+        width: 75%;
+        margin: 5px auto;
+        
+    }
+   
+    .banner-container-text h2 {
+        font-size: 14px;
+        width: 75%;
+        margin: 10px auto 5px auto;   
+    }
+    .banner-container-text button {
+        width: 75%;
+    }
+}
 /*Second Page-Scrolling Down*/
 .second-banner-container {
     background-color: hsl(0, 0%, 90%);
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding: 32px 0px;
 }
 .second-image-para-container {
     width: 60%;
-    
+    background-color: hsl(0, 0%, 90%);
 }
 .second-img-container{
-    outline: 1px solid black;
+    
     padding: 0px 24px;
     width: 100%;
     background-color: hsl(0, 0%, 90%);
@@ -214,9 +247,21 @@ header {
 }
 .para-container {
     padding: 32px 24px;
+    background-color: hsl(0, 0%, 90%);
+}
+.para-container h1 {
+    font-size: 26px;
+}
+.para-container h4 {
+    margin: 5px
+}
+
+.para-container h1, .para-container h4, 
+.para-container p {
+background-color: hsl(0, 0%, 90%);
 }
 .second-right-list {
-    outline: 1px solid black;
+    
     padding-left: 24px;
     padding-right: 24px;
     width: 40%;
@@ -311,8 +356,8 @@ display: initial, and display: none;*/
      .orientation-text-container p {
        display: none;
    }
-   .second-banner-container {
-       padding: 12px 0px;
+   .second-right-list h3 {
+       font-size: 17.5px;
    }
    .second-right-list {
        padding: 0px 0px;
@@ -328,8 +373,8 @@ Subject Menu, then 6-divs: each
 with a text-based section and a image section.*/
 .third-banner {
     width: 100%;
-    border-top: 5px solid black;
-    border-bottom: 5px solif black;
+    
+   
     background: lightgray;
     padding: 32px 72px;
 }
@@ -364,7 +409,7 @@ Build */
 .third-banner-mobile {
    display: flex;
    width: 100%;
-    outline: 5px solid black;
+    outline: 1px solid black;
 
     justify-content: center;
     background-color: #edf0f1;
@@ -425,7 +470,7 @@ with Flex vs Inline-Flex*/
 }
 .fourth-header-div {
         text-align: center;
-        outline: 1px solid black;
+      
         font-size: 32px;
         display: block;
         margin: 1px auto;
@@ -433,7 +478,8 @@ with Flex vs Inline-Flex*/
         width: 100%;
 }
 .fourth-header-div h3 {
-    font-size: 32px;
+    font-size: 26px;
+    padding: 8px 16px 0px 16px;
 }
 .fourth-banner-video-para-container {
     display: flex;
@@ -500,5 +546,26 @@ with Flex vs Inline-Flex*/
     }
     .fourth-banner-video-para-container {
         width: 100%;
+    }
+}
+/*The following is the final footer section*/
+.footer {
+    background-color: whitesmoke;
+   
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.left-footer, .right-footer {
+    display: inline-flex;
+} 
+.left-footer {
+    margin-right: auto;
+}
+@media only screen and (max-width: 600px) {
+    .footer {
+        font-size: 8px;
     }
 }
